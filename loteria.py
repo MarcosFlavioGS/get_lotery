@@ -25,7 +25,7 @@ print("Números com uma determinada quantidade de ocorrência nos ultimos sortei
 print("Foi notado que um número que se repete 2 vezes ou mais nos últimos 15 sorteios, raramente é sorteado...")
 print("Porém, fica a sua escolha qual a ocorrência desejada para a aplicação do filtro!")
 print("*******************************************************************************************************")
-ocurrence = int(input("Qual a o número de ocorrências gostaria de filtrar pros ultimos 15 sorteios ?"))
+ocurrence = int(input("Qual a o número de ocorrências gostaria de filtrar pros ultimos 15 sorteios ? "))
 print("*******************************************************************************************************")
 
 for n in list:
