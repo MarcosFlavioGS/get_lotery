@@ -41,8 +41,12 @@ commons.sort()
 dif.sort()
 
 print(f"Números que saíram {ocurrence} vezes ou mais nos ultimos 15 sorteios: {commons}")
-input = int(input("Gostaria de quantos números ? "))
 
-result = generator(dif, input)
+re = '1'
+while (re == '1'):
+    choice = int(input("Gostaria de quantos números ? "))
+    result = generator(dif, choice)
+    print(f"Números sorteados: {result}")
+    re = input("Deseja gerar mais números ? (1 - Sim / 2 - Não) ")
 
-print(f"Números sorteados: {result}")
+input("Finishing program, press any key to exit...")
