@@ -1,1 +1,1 @@
-python3 ~/workspace/python/loteria/loteria.py
+python3 loteria.py
