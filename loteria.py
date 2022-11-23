@@ -29,7 +29,7 @@ ocurrence = int(input("Qual a o número de ocorrências gostaria de filtrar pros
 print("*******************************************************************************************************")
 
 for n in list:
-    if list.count(n) > ocurrence:
+    if list.count(n) >= ocurrence:
         if n in commons:
             continue
         else:
