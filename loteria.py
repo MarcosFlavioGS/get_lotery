@@ -20,13 +20,13 @@ list = read_integers("numbers.txt")
 commons = []
 dif = []
 
-print("*******************************************************************************************************")
+print("******************************************************************************************************************")
 print("Números com uma determinada quantidade de ocorrência nos ultimos sorteios serão filtrados!")
-print("Foi notado que um número que se repete 2 vezes ou mais nos últimos 15 sorteios, raramente é sorteado...")
+print("Foi notado que um número que se repete 2 vezes ou mais nos últimos 14 sorteios, raramente é sorteado no próximo...")
 print("Porém, fica a sua escolha qual a ocorrência desejada para a aplicação do filtro!")
-print("*******************************************************************************************************")
+print("******************************************************************************************************************")
 ocurrence = int(input("Qual a o número de ocorrências gostaria de filtrar pros ultimos 15 sorteios ? "))
-print("*******************************************************************************************************")
+print("******************************************************************************************************************")
 
 for n in list:
     if list.count(n) >= ocurrence:
@@ -40,7 +40,7 @@ for n in list:
 commons.sort()
 dif.sort()
 
-print(f"Números que saíram {ocurrence} vezes ou mais nos ultimos 15 sorteios: {commons}")
+print(f"Números que saíram {ocurrence} vezes ou mais nos ultimos 14 sorteios: {commons}")
 
 re = '1'
 while (re == '1'):
