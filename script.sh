@@ -1,1 +1,1 @@
-python3 loteria.py
+python3 main.py
