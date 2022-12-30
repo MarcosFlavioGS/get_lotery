@@ -7,9 +7,9 @@ def loto_facil():
 
     print(f"Número de vezes que cada volante saiu nos ultimos 15 sorteios:\n {line_ocurrence('loto.txt')}")
 
-    print("******************************************************************************************************************")
-    ocurrence = int(input("Qual a o número de ocorrências gostaria de filtrar pros ultimos 15 sorteios ? "))
-    print("******************************************************************************************************************")
+    # print("******************************************************************************************************************")
+    # ocurrence = int(input("Qual a o número de ocorrências gostaria de filtrar pros ultimos 15 sorteios ? "))
+    # print("******************************************************************************************************************")
 
     # for n in numbers:
     #     if list.count(n) >= ocurrence:
@@ -20,12 +20,15 @@ def loto_facil():
     #     else:
     #         dif.append(n)
 
-    re = '1'
-    while (re == '1'):
-        choice = int(input("Gostaria de quantos números ? (15 - 20)"))
+    while (True):
+        choice = int(input("Gostaria de quantos números ? (15 - 20): "))
         result = fast_generator(numbers, choice)
         print(f"Números sorteados: {result}")
         re = input("Deseja gerar mais números ? (1 - Sim / 2 - Não) ")
+        if re == "1":
+            continue
+        else:
+            break
 
     input("Saindo da lotofácil, pressione qualquer tecla para continuar...")
 

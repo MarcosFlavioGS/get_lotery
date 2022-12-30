@@ -1,15 +1,19 @@
 import random
 
-def generator(list, input):
+def generator(list, input, memo={}):
+    if input in memo:
+        return memo[input]
     nums = [random.choice(list) for i in range(1, input+1)]
     for n in nums:
         if nums.count(n) > 1:
-            result = generator(list, input)
+            result = generator(list, input, memo)
             result.sort()
+            memo[input] = result
             return result
         else:
             continue
     nums.sort()
+    memo[input] = nums
     return nums
 
 def fast_generator(list, input):
@@ -24,15 +28,8 @@ def fast_generator(list, input):
 def read_integers(file):
     with open(file, 'r') as f:
         lines = f.readlines()
-        numbers = []
-        for line in lines:
-            for number in line.split():
-                numbers.append(int(number))
+        numbers = [int(numbers) for line in lines for numbers in line.strip().split()]
         return numbers
-
-# def read_integers(filename):
-#     with open(filename) as f:
-#         return [int(x) for x in f]
 
 def number_ocurrence(file):
     with open(file, 'r') as f:
@@ -51,6 +48,7 @@ def line_ocurrence(file):
         lines = f.readlines()
         numbers = {}
         for line in lines:
+            line = line.strip()
             if line in numbers:
                 numbers[line] += 1
             else:
