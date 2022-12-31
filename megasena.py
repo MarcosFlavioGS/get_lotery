@@ -1,4 +1,4 @@
-from aux_func import read_integers, generator, number_ocurrence
+from aux_func import read_integers, generator, number_occurrence
 
 def mega_sena():
     list = read_integers("mega.txt")
@@ -14,13 +14,15 @@ def mega_sena():
     print("Porém, fica a sua escolha qual a ocorrência desejada para a aplicação do filtro!")
     print("******************************************************************************************************************")
 
-    print(f"Quantidade de vezes que cada número saiu nos ultimos 15 sorteios:\n {number_ocurrence('mega.txt')}")
+    num_occurrence = number_occurrence('mega.txt')
 
-    ocurrence = int(input("Qual a o número de ocorrências gostaria de filtrar pros ultimos 15 sorteios ? "))
+    print(f"Quantidade de vezes que cada número saiu nos ultimos 15 sorteios:\n {num_occurrence}")
+
+    occurrence = int(input("\nQual a o número de ocorrências gostaria de filtrar pros ultimos 15 sorteios ? "))
     print("******************************************************************************************************************")
 
     for n in numbers:
-        if list.count(n) >= ocurrence:
+        if list.count(n) >= occurrence:
             if n in commons:
                 continue
             else:
@@ -31,17 +33,17 @@ def mega_sena():
     commons.sort()
     dif.sort()
 
-    print(f"\nNúmeros que saíram {ocurrence} vezes ou mais nos ultimos 15 sorteios: {commons}")
-    print(f"\nNúmeros que saíram menos de {ocurrence} vezes nos ultimos 15 sorteios: {dif}")
+    print(f"\nNúmeros que saíram {occurrence} vezes ou mais nos ultimos 15 sorteios: {commons}")
+    print(f"\nNúmeros que saíram menos de {occurrence} vezes nos ultimos 15 sorteios: {dif}")
 
     re = '1'
     while (re == '1'):
-        choice = int(input("Gostaria de quantos números ? "))
+        choice = int(input("\nGostaria de quantos números ? "))
         result = generator(dif, choice)
-        print(f"Números sorteados: {result}")
-        re = input("Deseja gerar mais números ? (1 - Sim / 2 - Não) ")
+        print(f"\nNúmeros sorteados: {result}")
+        re = input("\nDeseja gerar mais números ? (1 - Sim / 2 - Não) ")
 
-    input("Saindo da mega sena, pressione qualquer tecla para continuar...")
+    input("\nSaindo da mega sena, pressione qualquer tecla para continuar...")
 
     if __name__ == "__main__":
         mega_sena()
