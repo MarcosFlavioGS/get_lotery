@@ -45,5 +45,5 @@ def mega_sena():
 
     input("\nSaindo da mega sena, pressione qualquer tecla para continuar...")
 
-    if __name__ == "__main__":
-        mega_sena()
+if __name__ == "__main__":
+    mega_sena()
