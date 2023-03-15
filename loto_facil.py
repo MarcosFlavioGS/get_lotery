@@ -13,9 +13,7 @@ def check_occurrence(dict, list, str):
     return False
 
 def loto_facil():
-    numbers = []
-    for i in range(1, 26):
-        numbers.append(i)
+    numbers = [i for i in range(1, 26)]
 
     occurrence = line_occurrence('loto.txt')
 

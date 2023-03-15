@@ -4,9 +4,7 @@ def mega_sena():
     list = read_integers("mega.txt")
     commons = []
     dif = []
-    numbers = []
-    for i in range(1, 61):
-        numbers.append(i)
+    numbers = [i for i in range(1, 61)]
 
     print("******************************************************************************************************************")
     print("Números com uma determinada quantidade de ocorrência nos ultimos sorteios serão filtrados!")
