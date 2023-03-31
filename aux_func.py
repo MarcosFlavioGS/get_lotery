@@ -1,5 +1,6 @@
 import random
 
+
 def generator(list, input):
     nums = []
     while len(nums) < input:
@@ -9,11 +10,13 @@ def generator(list, input):
     nums.sort()
     return nums
 
+
 def read_integers(file):
     with open(file, 'r') as f:
         lines = f.readlines()
         numbers = [int(numbers) for line in lines for numbers in line.strip().split()]
         return numbers
+
 
 def number_occurrence(file):
     with open(file, 'r') as f:
@@ -26,6 +29,7 @@ def number_occurrence(file):
                 else:
                     numbers[number] = 1
         return numbers
+
 
 def line_occurrence(file):
     with open(file, 'r') as f:
