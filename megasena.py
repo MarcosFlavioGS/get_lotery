@@ -1,5 +1,6 @@
 from aux_func import read_integers, generator, number_occurrence
 
+
 def mega_sena():
     list = read_integers("mega.txt")
     commons = []
@@ -8,15 +9,15 @@ def mega_sena():
 
     print("******************************************************************************************************************")
     print("Números com uma determinada quantidade de ocorrência nos ultimos sorteios serão filtrados!")
-    print("Foi notado que um número que se repete 2 vezes ou mais nos últimos 15 sorteios, raramente é sorteado no próximo...")
+    print("Foi notado que um número que se repete 3 vezes ou mais nos últimos 14 sorteios, raramente é sorteado no próximo...")
     print("Porém, fica a sua escolha qual a ocorrência desejada para a aplicação do filtro!")
     print("******************************************************************************************************************")
 
     num_occurrence = number_occurrence('mega.txt')
 
-    print(f"Quantidade de vezes que cada número saiu nos ultimos 15 sorteios:\n {num_occurrence}")
+    print(f"Quantidade de vezes que cada número saiu nos ultimos 14 sorteios:\n {num_occurrence}")
 
-    occurrence = int(input("\nQual a o número de ocorrências gostaria de filtrar pros ultimos 15 sorteios ? "))
+    occurrence = int(input("\nQual a o número de ocorrências gostaria de filtrar pros ultimos 14 sorteios ? "))
     print("******************************************************************************************************************")
 
     for n in numbers:
@@ -31,8 +32,8 @@ def mega_sena():
     commons.sort()
     dif.sort()
 
-    print(f"\nNúmeros que saíram {occurrence} vezes ou mais nos ultimos 15 sorteios: {commons}")
-    print(f"\nNúmeros que saíram menos de {occurrence} vezes nos ultimos 15 sorteios: {dif}")
+    print(f"\nNúmeros que saíram {occurrence} vezes ou mais nos ultimos 14 sorteios: {commons}")
+    print(f"\nNúmeros que saíram menos de {occurrence} vezes nos ultimos 14 sorteios: {dif}")
 
     re = '1'
     while (re == '1'):
@@ -42,6 +43,7 @@ def mega_sena():
         re = input("\nDeseja gerar mais números ? (1 - Sim / 2 - Não) ")
 
     input("\nSaindo da mega sena, pressione qualquer tecla para continuar...")
+
 
 if __name__ == "__main__":
     mega_sena()
