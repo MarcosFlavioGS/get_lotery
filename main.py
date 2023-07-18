@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from megasena import mega_sena
 from loto_facil import loto_facil
 
